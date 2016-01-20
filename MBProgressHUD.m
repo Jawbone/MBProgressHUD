@@ -7,7 +7,8 @@
 #import "MBProgressHUD.h"
 #import <tgmath.h>
 
-
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused-macros"
 #if __has_feature(objc_arc)
 	#define MB_AUTORELEASE(exp) exp
 	#define MB_RELEASE(exp) exp
@@ -17,6 +18,7 @@
 	#define MB_RELEASE(exp) [exp release]
 	#define MB_RETAIN(exp) [exp retain]
 #endif
+#pragma clang diagnostic pop
 
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= 60000
     #define MBLabelAlignmentCenter NSTextAlignmentCenter
